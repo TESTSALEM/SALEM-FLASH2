@@ -47,7 +47,7 @@ android.private_storage = True
 android.entrypoint = org.kivy.android.PythonActivity
 
 # (list) The Android archs to build for, choices: armeabi-v7a, arm64-v8a, x86, x86_64
-# التعديل 1: الاكتفاء بمعمارية واحدة لتسريع البناء ومنع امتلاء الذاكرة
+# التعديل 1: تم اختيار arm64-v8a فقط لتسريع البناء ومنع امتلاء الذاكرة
 android.archs = arm64-v8a
 
 # (bool) Enable AndroidX support. Enable when 'android.api' >= 28
