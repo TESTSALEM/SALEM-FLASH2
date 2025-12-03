@@ -20,7 +20,6 @@ version = 1.0
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-# هام جداً: التعديل تم هنا (pyjnius)
 requirements = python3,kivy==2.2.0,android,pyjnius,arabic-reshaper,python-bidi
 
 # (str) Icon of the application
@@ -48,10 +47,16 @@ android.private_storage = True
 android.entrypoint = org.kivy.android.PythonActivity
 
 # (list) The Android archs to build for, choices: armeabi-v7a, arm64-v8a, x86, x86_64
-android.archs = arm64-v8a, armeabi-v7a
+# التعديل 1: الاكتفاء بمعمارية واحدة لتسريع البناء ومنع امتلاء الذاكرة
+android.archs = arm64-v8a
+
+# (bool) Enable AndroidX support. Enable when 'android.api' >= 28
+# التعديل 2: تفعيل AndroidX ضروري للإصدارات الحديثة
+android.enable_androidx = True
 
 # (int) python-for-android version to use
-p4a.branch = master
+# التعديل 3: تم إيقاف هذا السطر لاستخدام النسخة المستقرة بدلاً من التجريبية
+# p4a.branch = master
 
 [buildozer]
 
